@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const isActive = ({ isCurrent }) => {
-  return isCurrent ? { className: "nav-link active" } : {className: "nav-link"}
+  return isCurrent ? { className: "nav-link active" } : { className: "nav-link" }
 }
 
 const ExactNavLink = props => (
@@ -12,11 +12,11 @@ const ExactNavLink = props => (
 
 const Navbar = ({ siteTitle }) => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-primary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top border-bottom shadow-sm">
+      <div className="container">
         <Link to="/" className="navbar-brand" href="#">{siteTitle}</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
-                aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 
@@ -26,14 +26,21 @@ const Navbar = ({ siteTitle }) => {
               <ExactNavLink
                 to="/"
               >
-                Home
+                Beranda
               </ExactNavLink>
             </li>
             <li className="nav-item">
               <ExactNavLink
-                to="/about"
+                to="/tentang"
               >
-                About
+                Tentang
+              </ExactNavLink>
+            </li>
+            <li className="nav-item">
+              <ExactNavLink
+                to="/technologi"
+              >
+                Tekonologi
               </ExactNavLink>
             </li>
           </ul>

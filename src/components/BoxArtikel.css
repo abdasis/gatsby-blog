@@ -1,0 +1,23 @@
+.judul-artikel{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content-artikel{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(121, 114, 114);
+
+}
+
+.featured-image{
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.comment-count, .bookmark-count{
+    font-size: 14px;
+    font-weight: 500;
+}
